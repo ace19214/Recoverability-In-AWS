@@ -1,0 +1,39 @@
+access mysql: mysql -h udacity.ca3wmfk8xuio.us-east-1.rds.amazonaws.com -P 3306 -u admin -p 
+mysql> use udacity
+Database changed
+mysql> create table employees(
+    ->    employee_id INT NOT NULL AUTO_INCREMENT,
+    ->    employee_name VARCHAR(100) NOT NULL,
+    ->    employee_address VARCHAR(100) NOT NULL,
+    ->    PRIMARY KEY ( employee_id )
+    -> );
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> select * from employees;
+Empty set (0.00 sec)
+
+mysql> 
+mysql> INSERT INTO employees(employee_name, employee_address) VALUES ('duydd','HCM city');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employees;
++-------------+---------------+------------------+
+| employee_id | employee_name | employee_address |
++-------------+---------------+------------------+
+|           1 | duydd         | HCM city         |
++-------------+---------------+------------------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO employees(employee_name, employee_address) VALUES ('thanhpm2','HAI PHONG city');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employees;
++-------------+---------------+------------------+
+| employee_id | employee_name | employee_address |
++-------------+---------------+------------------+
+|           1 | duydd         | HCM city         |
+|           2 | thanhpm2      | HAI PHONG city   |
++-------------+---------------+------------------+
+2 rows in set (0.00 sec)
+
+mysql> 

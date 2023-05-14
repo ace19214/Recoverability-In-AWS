@@ -1,0 +1,33 @@
+access mysql: mysql -h udacity-rep.chnwda0mhv8z.us-west-2.rds.amazonaws.com -P 3306 -u admin -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 285
+Server version: 8.0.32 Source distribution
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use udacity
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> INSERT INTO employees(employee_name, employee_address) VALUES ('duongdd5','NAM DINH city');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employees;
++-------------+---------------+------------------+
+| employee_id | employee_name | employee_address |
++-------------+---------------+------------------+
+|           1 | duydd         | HCM city         |
+|           2 | thanhpm2      | HAI PHONG city   |
+|           3 | duongdd5      | NAM DINH city    |
++-------------+---------------+------------------+
+3 rows in set (0.01 sec)
+
+mysql> 

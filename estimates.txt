@@ -1,0 +1,21 @@
+1. Minimum RTO for a single AZ outage 
+The fail over to another AZ will happen automatically which can take a minute.
+
+2. Minimum RTO for a single region outage
+        ◦ 00:00 - Problem happens
+        ◦ 00:05 - An amount of time passes before an alert triggers
+        ◦ 00:06 - Alert triggers on-all staff
+        ◦ 00:14 - On-call staff may need to get out of bed, get to computer, log in, log onto VPN
+	◦ 00:15 - The replicate is actived
+        ◦ 00:22 - On-call staff starts diagnosing issue
+        ◦ 00:37 - Root cause is discovered
+        ◦ 00:42 - Remediation started:  Promote secondary instance to be the new master and then route the traffic to the new endpoint
+        ◦ 00:48 - Remediation completed
+       Total time: 48 minutes 
+
+3. Minimum RPO for a single AZ outage
+Min RPO ~1min
+
+
+4. Minimum RPO for a single region outage 
+Minimum RPO ~15min

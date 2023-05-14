@@ -1,0 +1,32 @@
+access mysql: mysql -h udacity-rep.chnwda0mhv8z.us-west-2.rds.amazonaws.com -P 3306 -u admin -p
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| udacity            |
++--------------------+
+5 rows in set (0.01 sec)
+
+mysql> use udacity;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> select * from employess;
+ERROR 1146 (42S02): Table 'udacity.employess' doesn't exist
+mysql> select * from employees;
++-------------+---------------+------------------+
+| employee_id | employee_name | employee_address |
++-------------+---------------+------------------+
+|           1 | duydd         | HCM city         |
+|           2 | thanhpm2      | HAI PHONG city   |
++-------------+---------------+------------------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO employees(employee_name, employee_address) VALUES ('duongdd5','NAM DINH city');
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+mysql> 
